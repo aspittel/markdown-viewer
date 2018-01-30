@@ -19,17 +19,25 @@ p {
   font-size: 16px;
 }
 
-input {
+input, button {
   text-decoration: none;
-  color: #fff;
-  background-color: pink;
-  text-align: center;
-  letter-spacing: .25px;
-  font-size: 16px;
-  outline: 0;
+  color: pink;
+  background-color: transparent;
+  font-size: 30px;
   border: none;
-  border-radius: 5px;
-  height: 36px;
-  padding: 0 10px;
   font-family: 'Lato', sans-serif;
+}
+
+input {
+  color: #43a047;
+}
+
+button {
+  color: #ef5350;
+  float: right;
+  font-size: 25px;
+}
+
+input:hover {
+  cursor: pointer;
 }
