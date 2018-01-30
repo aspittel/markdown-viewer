@@ -3,14 +3,14 @@ const { app, BrowserWindow } = electron
 const path = require('path')
 const url = require('url')
 
-require('electron-reload')(__dirname)
-
 let win
 
 function createWindow () {
   const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
 
   win = new BrowserWindow({ width, height, frame: false })
+
+  win.webContents.openDevTools()
 
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'view/index.html'),
