@@ -13,8 +13,10 @@ const readFile = (file) => {
   })
 }
 
+const filters = { filters: [{ name: 'Markdown', extensions: ['md', 'markdown'] }] }
+
 const openFilePicker = () => {
-  dialog.showOpenDialog({ filters: [{ name: 'Markdown', extensions: ['md', 'markdown'] }] }, fileNames => {
+  dialog.showOpenDialog(filters, fileNames => {
     if (fileNames) {
       readFile(fileNames[0])
     }
