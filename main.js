@@ -10,8 +10,6 @@ function createWindow () {
 
   win = new BrowserWindow({ width, height, frame: false })
 
-  win.webContents.openDevTools()
-
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'view/index.html'),
     protocol: 'file:',
